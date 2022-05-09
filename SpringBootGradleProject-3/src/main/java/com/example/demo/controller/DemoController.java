@@ -35,7 +35,7 @@ public class DemoController {
 	@GetMapping(value = Constants.GETBYID)
 	public User getUserById(@PathVariable("id") int id) throws Exception 
 	{
-
+            System.out.println("Hello");
 			return userService.getUserById(id);
 	
 	}
