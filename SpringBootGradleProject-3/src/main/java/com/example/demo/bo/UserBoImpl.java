@@ -8,17 +8,14 @@ import org.springframework.stereotype.Component;
 import com.example.demo.dto.UserDto;
 import com.example.demo.eo.UserEo;
 
-
-
 @Component
-public class UserBoImpl implements UserBo{
-	
+public class UserBoImpl implements UserBo {
+
 	@Autowired
 	private UserEo userEo;
 
 	Logger logger = LoggerFactory.getLogger(UserBoImpl.class);
-	
-	
+
 	@Override
 	public UserDto getUserById(int id) {
 		logger.info("Getting User By Id from BO");
@@ -30,13 +27,10 @@ public class UserBoImpl implements UserBo{
 		logger.info("Adding the user from BO");
 		return userEo.createUser(user);
 	}
-	
+
 	@Override
-	public boolean isUserExist(int id)
-	{
+	public boolean isUserExist(int id) {
 		return userEo.isUserExist(id);
 	}
-
-
 
 }

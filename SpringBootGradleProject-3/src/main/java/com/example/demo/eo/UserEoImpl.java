@@ -20,6 +20,7 @@ public class UserEoImpl implements UserEo{
 	
 	@Autowired
 	private UserMapper userMapper;
+	
 	@Override
 	public UserDto getUserById(int id) {
 		logger.info("Getting By Id from EO");
@@ -35,5 +36,6 @@ public class UserEoImpl implements UserEo{
     {
     	return userDao.existsById(id);
     }
+
 
 }

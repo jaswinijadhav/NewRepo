@@ -1,31 +1,25 @@
 package com.example.demo.entity;
 
-import javax.persistence.Id;
-
-
-
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-
 
 import org.springframework.validation.annotation.Validated;
 
 @Validated
 public class User {
-	
+
 	@NotNull
-//	@Id
-//	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	@NotBlank
 	private String name;
 	private int age;
 	private long phone;
-	
+
 	public User() {
 		super();
 	}
-	
+
 	public User(int id, String name, int age, long phone) {
 		super();
 		this.id = id;
@@ -70,11 +64,5 @@ public class User {
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", age=" + age + ", phone=" + phone + "]";
 	}
-	
-	
-	
-	
-	
 
 }
-
